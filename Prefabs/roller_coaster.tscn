@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://den2nv60o56hu"]
+[gd_scene load_steps=2 format=3 uid="uid://den2nv60o56hu"]
 
-[node name="RollerCoaster" type="Node"]
+[ext_resource type="Script" uid="uid://cgq8kghwkswrk" path="res://Prefabs/roller_coaster.gd" id="1_xo7wl"]
+
+[node name="RollerCoaster" type="Node3D"]
+script = ExtResource("1_xo7wl")

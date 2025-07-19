@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://27fucb2mkv6l"]
+
+[ext_resource type="PackedScene" uid="uid://bnx6vax2ju6qa" path="res://Assets/Rollecoaster Package/coaster-train-front.glb" id="1_leif4"]
+[ext_resource type="Script" uid="uid://bh056j0gyxlr5" path="res://Prefabs/player_wagon.gd" id="1_veb2f"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_veb2f"]
+radius = 1.0
+
+[node name="player_wagon" type="PathFollow3D"]
+script = ExtResource("1_veb2f")
+
+[node name="coaster-train-front2" parent="." instance=ExtResource("1_leif4")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_veb2f")

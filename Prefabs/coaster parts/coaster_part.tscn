@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5of1hbjj1eb7"]
+
+[ext_resource type="Script" uid="uid://dlrymhmmo8jo6" path="res://coaster_part.gd" id="1_krflh"]
+
+[node name="coaster_part" type="Node3D" node_paths=PackedStringArray("end_point")]
+script = ExtResource("1_krflh")
+end_point = NodePath("end_point")
+
+[node name="end_point" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)

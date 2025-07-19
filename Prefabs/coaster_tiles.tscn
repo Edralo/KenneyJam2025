@@ -1,28 +1,5 @@
-[gd_scene load_steps=138 format=3 uid="uid://cxb7ahgw7bdip"]
+[gd_scene load_steps=115 format=3 uid="uid://cxb7ahgw7bdip"]
 
-[ext_resource type="PackedScene" uid="uid://c1h3tenjgbdrp" path="res://Assets/Rollecoaster Package/coaster-monorail-cap-back.glb" id="1_433yk"]
-[ext_resource type="PackedScene" uid="uid://bnqk3q7ac0661" path="res://Assets/Rollecoaster Package/coaster-monorail-cap-front.glb" id="2_ycb32"]
-[ext_resource type="PackedScene" uid="uid://br5icqkromwbh" path="res://Assets/Rollecoaster Package/coaster-monorail-corner-large-ramp.glb" id="3_j4qk3"]
-[ext_resource type="PackedScene" uid="uid://r8rm210retd6" path="res://Assets/Rollecoaster Package/coaster-monorail-corner-large.glb" id="4_odaef"]
-[ext_resource type="PackedScene" uid="uid://b4xdyl3hg1n01" path="res://Assets/Rollecoaster Package/coaster-monorail-corner-small-ramp.glb" id="5_rd8s8"]
-[ext_resource type="PackedScene" uid="uid://cttxaadpf68hq" path="res://Assets/Rollecoaster Package/coaster-monorail-corner-small.glb" id="6_33wjp"]
-[ext_resource type="PackedScene" uid="uid://btm3rds55av6b" path="res://Assets/Rollecoaster Package/coaster-monorail-curve.glb" id="7_arg8a"]
-[ext_resource type="PackedScene" uid="uid://cx7hyqk3w8lr1" path="res://Assets/Rollecoaster Package/coaster-monorail-looping.glb" id="8_ch7n1"]
-[ext_resource type="PackedScene" uid="uid://qjkgybr6nv48" path="res://Assets/Rollecoaster Package/coaster-monorail-segment.glb" id="9_o7mpu"]
-[ext_resource type="PackedScene" uid="uid://cudcr1w6u7i8j" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-bend-large.glb" id="10_2fbq5"]
-[ext_resource type="PackedScene" uid="uid://c1kjl474g8ihi" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-bend.glb" id="11_22r5l"]
-[ext_resource type="PackedScene" uid="uid://c6v0lsxyq4pxc" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-bump-down.glb" id="12_d511k"]
-[ext_resource type="PackedScene" uid="uid://b4k8mq4lw0jql" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-bump-up.glb" id="13_b4ssu"]
-[ext_resource type="PackedScene" uid="uid://b2uqxye1abv7p" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-hill-beginning.glb" id="14_qs40n"]
-[ext_resource type="PackedScene" uid="uid://x3onveua5gbo" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-hill-complete-half.glb" id="15_hrwmf"]
-[ext_resource type="PackedScene" uid="uid://bobwo7spqxbv1" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-hill-complete.glb" id="16_at10q"]
-[ext_resource type="PackedScene" uid="uid://dso1m4p0ro05f" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-hill-end.glb" id="17_3ppg6"]
-[ext_resource type="PackedScene" uid="uid://b38wmppvon387" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-skew-left-side.glb" id="18_fvt2f"]
-[ext_resource type="PackedScene" uid="uid://boaxnpbk8mkxq" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-skew-left.glb" id="19_6056m"]
-[ext_resource type="PackedScene" uid="uid://bwhsvalrixghw" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-skew-right-side.glb" id="20_exlfd"]
-[ext_resource type="PackedScene" uid="uid://bewa77scm6mdr" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-skew-right.glb" id="21_u26s8"]
-[ext_resource type="PackedScene" uid="uid://boa4673hymlaw" path="res://Assets/Rollecoaster Package/coaster-monorail-straight.glb" id="22_lvn3j"]
-[ext_resource type="PackedScene" uid="uid://bvqxv718ce8nt" path="res://Assets/Rollecoaster Package/coaster-monorail-track.glb" id="23_r3ocw"]
 [ext_resource type="PackedScene" uid="uid://0c8p6w6trt07" path="res://Assets/Rollecoaster Package/coaster-mouse-cap-back.glb" id="24_enl6r"]
 [ext_resource type="PackedScene" uid="uid://d25e7dlqeakh3" path="res://Assets/Rollecoaster Package/coaster-mouse-cap-front.glb" id="25_5q3jp"]
 [ext_resource type="PackedScene" uid="uid://c43r56mi1g2jp" path="res://Assets/Rollecoaster Package/coaster-mouse-corner-large-ramp.glb" id="26_sb12h"]
@@ -139,52 +116,6 @@
 [ext_resource type="PackedScene" uid="uid://tbhb5n1sf3ut" path="res://Assets/Rollecoaster Package/bench.glb" id="137_1h3vn"]
 
 [node name="Node3D" type="Node3D"]
-
-[node name="coaster-monorail-cap-back2" parent="." instance=ExtResource("1_433yk")]
-
-[node name="coaster-monorail-cap-front2" parent="." instance=ExtResource("2_ycb32")]
-
-[node name="coaster-monorail-corner-large-ramp2" parent="." instance=ExtResource("3_j4qk3")]
-
-[node name="coaster-monorail-corner-large2" parent="." instance=ExtResource("4_odaef")]
-
-[node name="coaster-monorail-corner-small-ramp2" parent="." instance=ExtResource("5_rd8s8")]
-
-[node name="coaster-monorail-corner-small2" parent="." instance=ExtResource("6_33wjp")]
-
-[node name="coaster-monorail-curve2" parent="." instance=ExtResource("7_arg8a")]
-
-[node name="coaster-monorail-looping2" parent="." instance=ExtResource("8_ch7n1")]
-
-[node name="coaster-monorail-segment2" parent="." instance=ExtResource("9_o7mpu")]
-
-[node name="coaster-monorail-straight-bend-large2" parent="." instance=ExtResource("10_2fbq5")]
-
-[node name="coaster-monorail-straight-bend2" parent="." instance=ExtResource("11_22r5l")]
-
-[node name="coaster-monorail-straight-bump-down2" parent="." instance=ExtResource("12_d511k")]
-
-[node name="coaster-monorail-straight-bump-up2" parent="." instance=ExtResource("13_b4ssu")]
-
-[node name="coaster-monorail-straight-hill-beginning2" parent="." instance=ExtResource("14_qs40n")]
-
-[node name="coaster-monorail-straight-hill-complete-half2" parent="." instance=ExtResource("15_hrwmf")]
-
-[node name="coaster-monorail-straight-hill-complete2" parent="." instance=ExtResource("16_at10q")]
-
-[node name="coaster-monorail-straight-hill-end2" parent="." instance=ExtResource("17_3ppg6")]
-
-[node name="coaster-monorail-straight-skew-left-side2" parent="." instance=ExtResource("18_fvt2f")]
-
-[node name="coaster-monorail-straight-skew-left2" parent="." instance=ExtResource("19_6056m")]
-
-[node name="coaster-monorail-straight-skew-right-side2" parent="." instance=ExtResource("20_exlfd")]
-
-[node name="coaster-monorail-straight-skew-right2" parent="." instance=ExtResource("21_u26s8")]
-
-[node name="coaster-monorail-straight2" parent="." instance=ExtResource("22_lvn3j")]
-
-[node name="coaster-monorail-track2" parent="." instance=ExtResource("23_r3ocw")]
 
 [node name="coaster-mouse-cap-back2" parent="." instance=ExtResource("24_enl6r")]
 

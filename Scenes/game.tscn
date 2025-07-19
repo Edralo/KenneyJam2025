@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dr88c2dbvsoi2"]
+[gd_scene load_steps=8 format=3 uid="uid://dr88c2dbvsoi2"]
 
 [ext_resource type="PackedScene" uid="uid://bbis71jchd2h1" path="res://Prefabs/terrain.tscn" id="1_qxrlw"]
 [ext_resource type="MeshLibrary" uid="uid://bs3wovj60putp" path="res://MeshLibraries/coaster.tres" id="2_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://den2nv60o56hu" path="res://Prefabs/roller_coaster.tscn" id="3_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://dkj366e5v71ev" path="res://Prefabs/coaster parts/coaster_part_straight.tscn" id="4_v158k"]
+[ext_resource type="PackedScene" uid="uid://ctyqm4qf252i6" path="res://Prefabs/coaster parts/coaster_part_turn_left.tscn" id="5_h4fw4"]
+[ext_resource type="PackedScene" uid="uid://bner03fvkyk3b" path="res://Prefabs/coaster parts/coaster_part_turn_right.tscn" id="6_ldgsr"]
+[ext_resource type="PackedScene" uid="uid://27fucb2mkv6l" path="res://Prefabs/player_wagon.tscn" id="8_v158k"]
 
 [node name="Game" type="Node"]
 
@@ -16,6 +21,94 @@ transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 
 mesh_library = ExtResource("2_wrm1d")
 cell_size = Vector3(1, 1, 1)
 data = {
-"cells": PackedInt32Array(65545, 3, 28, 65539, 5, 1441836, 131071, 5, 1441836, 131067, 5, 1441836, 65545, 65535, 44, 65545, 65531, 44, 131067, 65525, 1048620, 131071, 65525, 1048620, 65539, 65525, 1048620, 65543, 65525, 1048604, 131061, 65527, 655388, 131063, 5, 1441820, 65543, 5, 1441836, 131061, 3, 655388, 131063, 65525, 1048620, 65545, 65527, 44, 7, 5, 125, 9, 3, 125, 65527, 5, 125, 65525, 3, 125, 65525, 65527, 125, 65527, 65525, 125, 7, 65525, 125, 9, 65527, 125, 131063, 65529, 1441820, 131063, 1, 1048620, 131067, 1, 1048620, 131067, 65529, 1441836, 65539, 1, 1441836, 65541, 65535, 28, 131071, 65529, 1441836, 65539, 65529, 1441836, 65539, 65533, 1048604, 131071, 65533, 1048620, 131067, 65533, 1048620, 131063, 65533, 1048620, 131058, 65535, 655388, 131060, 65533, 1048620, 131060, 1, 1441820, 131062, 65531, 34, 131062, 65535, 28, 131064, 65533, 1048620)
+"cells": PackedInt32Array(7, 5, 125, 9, 3, 125, 65527, 5, 125, 65525, 3, 125, 65525, 65527, 125, 65527, 65525, 125, 7, 65525, 125, 9, 65527, 125)
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="RollerCoaster2" parent="." instance=ExtResource("3_1l0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5563, 2.50475, -0.429214)
+track_path = Array[PackedScene]([ExtResource("4_v158k"), ExtResource("5_h4fw4"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("5_h4fw4"), ExtResource("5_h4fw4"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("6_ldgsr"), ExtResource("4_v158k"), ExtResource("6_ldgsr"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("5_h4fw4"), ExtResource("5_h4fw4"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("5_h4fw4"), ExtResource("4_v158k"), ExtResource("4_v158k")])
+
+[node name="TrackPart_0" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+
+[node name="TrackPart_2" parent="RollerCoaster2" instance=ExtResource("5_h4fw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="TrackPart_3" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0, 6)
+
+[node name="TrackPart_4" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6, 0, 6)
+
+[node name="TrackPart_5" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, 6)
+
+[node name="TrackPart_6" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14, 0, 6)
+
+[node name="TrackPart_7" parent="RollerCoaster2" instance=ExtResource("5_h4fw4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18, 0, 6)
+
+[node name="TrackPart_8" parent="RollerCoaster2" instance=ExtResource("5_h4fw4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 20, 0, 4)
+
+[node name="TrackPart_9" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 18, 0, 2)
+
+[node name="TrackPart_10" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 14, 0, 2)
+
+[node name="TrackPart_11" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 10, 0, 2)
+
+[node name="TrackPart_12" parent="RollerCoaster2" instance=ExtResource("6_ldgsr")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 6, 0, 2)
+
+[node name="TrackPart_13" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 4, 0, 0)
+
+[node name="TrackPart_14" parent="RollerCoaster2" instance=ExtResource("6_ldgsr")]
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 4, 0, -4)
+
+[node name="TrackPart_15" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(1.94707e-07, 0, 1, 0, 1, 0, -1, 0, 1.94707e-07, 6, 0, -6)
+
+[node name="TrackPart_16" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(1.94707e-07, 0, 1, 0, 1, 0, -1, 0, 1.94707e-07, 10, 0, -6)
+
+[node name="TrackPart_17" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(1.94707e-07, 0, 1, 0, 1, 0, -1, 0, 1.94707e-07, 14, 0, -6)
+
+[node name="TrackPart_18" parent="RollerCoaster2" instance=ExtResource("5_h4fw4")]
+transform = Transform3D(1.94707e-07, 0, 1, 0, 1, 0, -1, 0, 1.94707e-07, 18, 0, -6)
+
+[node name="TrackPart_19" parent="RollerCoaster2" instance=ExtResource("5_h4fw4")]
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 20, 0, -8)
+
+[node name="TrackPart_20" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 18, 0, -10)
+
+[node name="TrackPart_21" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 14, 0, -10)
+
+[node name="TrackPart_22" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 10, 0, -10)
+
+[node name="TrackPart_23" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 6, 0, -10)
+
+[node name="TrackPart_24" parent="RollerCoaster2" instance=ExtResource("5_h4fw4")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 2, 0, -10)
+
+[node name="TrackPart_25" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, -8)
+
+[node name="TrackPart_26" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 9.53674e-07, 0, -4)
+
+[node name="player_wagon" parent="." instance=ExtResource("8_v158k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54557, 1.63458)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.28711, 0.957898, 0, -0.957898, 0.28711, 0, 3.44312, 0)
+sky_mode = 1

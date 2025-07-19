@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctyqm4qf252i6"]
+
+[ext_resource type="PackedScene" uid="uid://b5of1hbjj1eb7" path="res://Prefabs/coaster parts/coaster_part.tscn" id="1_788mb"]
+[ext_resource type="PackedScene" uid="uid://bxsenu6mjf0wh" path="res://Assets/Rollecoaster Package/coaster-mouse-corner-small.glb" id="2_u2qvu"]
+
+[sub_resource type="Curve3D" id="Curve3D_788mb"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0, 0, 0, 2, 0, 2),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u2qvu"]
+size = Vector3(2.3, 1, 2.3)
+
+[node name="coaster_part" node_paths=PackedStringArray("coaster_path") instance=ExtResource("1_788mb")]
+coaster_path = NodePath("Path3D")
+
+[node name="end_point" parent="." index="0"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0, 2)
+
+[node name="coaster-mouse-corner-small2" parent="." index="1" instance=ExtResource("2_u2qvu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 2)
+
+[node name="Path3D" type="Path3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.85, 0)
+curve = SubResource("Curve3D_788mb")
+
+[node name="Area3D" type="Area3D" parent="." index="3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.853211, -0.425, 1.13732)
+shape = SubResource("BoxShape3D_u2qvu")
