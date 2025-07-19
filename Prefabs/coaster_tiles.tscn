@@ -198,9 +198,6 @@
 
 [node name="coaster-mouse-corner-small2" parent="." instance=ExtResource("29_hns66")]
 
-[node name="coaster-mouse-corner-small_rotated" parent="." instance=ExtResource("29_hns66")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, -2)
-
 [node name="coaster-mouse-curve2" parent="." instance=ExtResource("30_or1g5")]
 
 [node name="coaster-mouse-looping2" parent="." instance=ExtResource("31_ewn8l")]
