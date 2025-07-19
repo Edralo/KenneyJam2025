@@ -16,8 +16,6 @@ point_count = 4
 script = ExtResource("1_0uuhd")
 zombie_prefab = ExtResource("2_5wf1j")
 
-[node name="Terrain" parent="." instance=ExtResource("1_rajyt")]
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.343676, 0.939088, 0, -0.939088, 0.343676, -0.294315, 23.3898, 9.60069)
 
@@ -32,9 +30,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2599, 0)
 curve = SubResource("Curve3D_8cvwt")
 
 [node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
-transform = Transform3D(0.0015616, 2.21595e-06, -0.999999, 2.27374e-13, 1, 2.21596e-06, 0.999999, -3.46066e-09, 0.0015616, -29.4428, 0.0175591, -21.9229)
+transform = Transform3D(0.0015616, 2.21595e-06, -0.999999, -1.13687e-13, 1, 2.21595e-06, 0.999999, -3.46031e-09, 0.0015616, -29.4428, 0.0175591, -21.9229)
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="Terrain" parent="." instance=ExtResource("1_rajyt")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
