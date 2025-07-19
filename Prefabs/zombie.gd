@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @export var speed = 2
+@export var health = 1
 
 func initialize(start_position, target_position):
 	look_at_from_position(start_position, target_position, Vector3.UP, true)
