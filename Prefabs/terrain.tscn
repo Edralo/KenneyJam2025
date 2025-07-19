@@ -2,7 +2,7 @@
 
 [ext_resource type="MeshLibrary" uid="uid://77ic1bgp3fe0" path="res://MeshLibraries/tiles.tres" id="1_h0k1d"]
 
-[node name="Terrain" type="Node"]
+[node name="Terrain" type="Node3D"]
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("1_h0k1d")
