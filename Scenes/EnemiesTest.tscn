@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://de4n1t2frn8q7"]
+
+[ext_resource type="Script" uid="uid://pet28j8ojr0j" path="res://Scenes/enemies_test.gd" id="1_0uuhd"]
+[ext_resource type="PackedScene" uid="uid://bbis71jchd2h1" path="res://Prefabs/terrain.tscn" id="1_rajyt"]
+[ext_resource type="PackedScene" uid="uid://dobv1vq5htf8t" path="res://Prefabs/zombie.tscn" id="2_5wf1j"]
+
+[sub_resource type="Curve3D" id="Curve3D_8cvwt"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -29.4428, 0.0175591, -21.9229, 0, 0, 0, 0, 0, 0, 29.0871, 0.0174294, -22.0143, 0, 0, 0, 0, 0, 0, 28.9202, -0.0119476, 14.8753, 0, 0, 0, 0, 0, 0, -29.2811, -0.0119476, 15.1292),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[node name="EnemiesTest" type="Node3D"]
+script = ExtResource("1_0uuhd")
+zombie_prefab = ExtResource("2_5wf1j")
+
+[node name="Terrain" parent="." instance=ExtResource("1_rajyt")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.343676, 0.939088, 0, -0.939088, 0.343676, -0.294315, 23.3898, 9.60069)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.273188, 5.21815, -0.0296364)
+shadow_enabled = true
+
+[node name="Player" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2599, 0)
+
+[node name="SpawnPath" type="Path3D" parent="."]
+curve = SubResource("Curve3D_8cvwt")
+
+[node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
+transform = Transform3D(0.0015616, 2.21595e-06, -0.999999, 2.27374e-13, 1, 2.21596e-06, 0.999999, -3.46066e-09, 0.0015616, -29.4428, 0.0175591, -21.9229)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
