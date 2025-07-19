@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://dr88c2dbvsoi2"]
+[gd_scene load_steps=3 format=3 uid="uid://dr88c2dbvsoi2"]
+
+[ext_resource type="PackedScene" uid="uid://bbis71jchd2h1" path="res://Prefabs/terrain.tscn" id="1_qxrlw"]
+[ext_resource type="MeshLibrary" uid="uid://bs3wovj60putp" path="res://MeshLibraries/coaster.tres" id="2_wrm1d"]
 
 [node name="Game" type="Node"]
+
+[node name="Terrain" parent="." instance=ExtResource("1_qxrlw")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 0, 15.949, 0.36389)
+
+[node name="RollerCoaster" type="Node" parent="."]
+
+[node name="GridMap" type="GridMap" parent="RollerCoaster"]
+mesh_library = ExtResource("2_wrm1d")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(65545, 3, 28, 65539, 5, 1441836, 131071, 5, 1441836, 131067, 5, 1441836, 65545, 65535, 44, 65545, 65531, 44, 131067, 65525, 1048620, 131071, 65525, 1048620, 65539, 65525, 1048620, 65543, 65525, 1048604, 131061, 65527, 655388, 131063, 5, 1441820, 65543, 5, 1441836, 131061, 3, 655388, 131063, 65525, 1048620, 65545, 65527, 44, 7, 5, 125, 9, 3, 125, 65527, 5, 125, 65525, 3, 125, 65525, 65527, 125, 65527, 65525, 125, 7, 65525, 125, 9, 65527, 125, 131063, 65529, 1441820, 131063, 1, 1048620, 131067, 1, 1048620, 131067, 65529, 1441836, 65539, 1, 1441836, 65541, 65535, 28, 131071, 65529, 1441836, 65539, 65529, 1441836, 65539, 65533, 1048604, 131071, 65533, 1048620, 131067, 65533, 1048620, 131063, 65533, 1048620, 131058, 65535, 655388, 131060, 65533, 1048620, 131060, 1, 1441820, 131062, 65531, 34, 131062, 65535, 28, 131064, 65533, 1048620)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)

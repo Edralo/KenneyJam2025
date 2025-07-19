@@ -1,0 +1,418 @@
+[gd_scene load_steps=138 format=3 uid="uid://cxb7ahgw7bdip"]
+
+[ext_resource type="PackedScene" uid="uid://c1h3tenjgbdrp" path="res://Assets/Rollecoaster Package/coaster-monorail-cap-back.glb" id="1_433yk"]
+[ext_resource type="PackedScene" uid="uid://bnqk3q7ac0661" path="res://Assets/Rollecoaster Package/coaster-monorail-cap-front.glb" id="2_ycb32"]
+[ext_resource type="PackedScene" uid="uid://br5icqkromwbh" path="res://Assets/Rollecoaster Package/coaster-monorail-corner-large-ramp.glb" id="3_j4qk3"]
+[ext_resource type="PackedScene" uid="uid://r8rm210retd6" path="res://Assets/Rollecoaster Package/coaster-monorail-corner-large.glb" id="4_odaef"]
+[ext_resource type="PackedScene" uid="uid://b4xdyl3hg1n01" path="res://Assets/Rollecoaster Package/coaster-monorail-corner-small-ramp.glb" id="5_rd8s8"]
+[ext_resource type="PackedScene" uid="uid://cttxaadpf68hq" path="res://Assets/Rollecoaster Package/coaster-monorail-corner-small.glb" id="6_33wjp"]
+[ext_resource type="PackedScene" uid="uid://btm3rds55av6b" path="res://Assets/Rollecoaster Package/coaster-monorail-curve.glb" id="7_arg8a"]
+[ext_resource type="PackedScene" uid="uid://cx7hyqk3w8lr1" path="res://Assets/Rollecoaster Package/coaster-monorail-looping.glb" id="8_ch7n1"]
+[ext_resource type="PackedScene" uid="uid://qjkgybr6nv48" path="res://Assets/Rollecoaster Package/coaster-monorail-segment.glb" id="9_o7mpu"]
+[ext_resource type="PackedScene" uid="uid://cudcr1w6u7i8j" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-bend-large.glb" id="10_2fbq5"]
+[ext_resource type="PackedScene" uid="uid://c1kjl474g8ihi" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-bend.glb" id="11_22r5l"]
+[ext_resource type="PackedScene" uid="uid://c6v0lsxyq4pxc" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-bump-down.glb" id="12_d511k"]
+[ext_resource type="PackedScene" uid="uid://b4k8mq4lw0jql" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-bump-up.glb" id="13_b4ssu"]
+[ext_resource type="PackedScene" uid="uid://b2uqxye1abv7p" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-hill-beginning.glb" id="14_qs40n"]
+[ext_resource type="PackedScene" uid="uid://x3onveua5gbo" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-hill-complete-half.glb" id="15_hrwmf"]
+[ext_resource type="PackedScene" uid="uid://bobwo7spqxbv1" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-hill-complete.glb" id="16_at10q"]
+[ext_resource type="PackedScene" uid="uid://dso1m4p0ro05f" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-hill-end.glb" id="17_3ppg6"]
+[ext_resource type="PackedScene" uid="uid://b38wmppvon387" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-skew-left-side.glb" id="18_fvt2f"]
+[ext_resource type="PackedScene" uid="uid://boaxnpbk8mkxq" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-skew-left.glb" id="19_6056m"]
+[ext_resource type="PackedScene" uid="uid://bwhsvalrixghw" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-skew-right-side.glb" id="20_exlfd"]
+[ext_resource type="PackedScene" uid="uid://bewa77scm6mdr" path="res://Assets/Rollecoaster Package/coaster-monorail-straight-skew-right.glb" id="21_u26s8"]
+[ext_resource type="PackedScene" uid="uid://boa4673hymlaw" path="res://Assets/Rollecoaster Package/coaster-monorail-straight.glb" id="22_lvn3j"]
+[ext_resource type="PackedScene" uid="uid://bvqxv718ce8nt" path="res://Assets/Rollecoaster Package/coaster-monorail-track.glb" id="23_r3ocw"]
+[ext_resource type="PackedScene" uid="uid://0c8p6w6trt07" path="res://Assets/Rollecoaster Package/coaster-mouse-cap-back.glb" id="24_enl6r"]
+[ext_resource type="PackedScene" uid="uid://d25e7dlqeakh3" path="res://Assets/Rollecoaster Package/coaster-mouse-cap-front.glb" id="25_5q3jp"]
+[ext_resource type="PackedScene" uid="uid://c43r56mi1g2jp" path="res://Assets/Rollecoaster Package/coaster-mouse-corner-large-ramp.glb" id="26_sb12h"]
+[ext_resource type="PackedScene" uid="uid://b847ijbhp04co" path="res://Assets/Rollecoaster Package/coaster-mouse-corner-large.glb" id="27_avg7t"]
+[ext_resource type="PackedScene" uid="uid://cet5l57v3j875" path="res://Assets/Rollecoaster Package/coaster-mouse-corner-small-ramp.glb" id="28_finca"]
+[ext_resource type="PackedScene" uid="uid://bxsenu6mjf0wh" path="res://Assets/Rollecoaster Package/coaster-mouse-corner-small.glb" id="29_hns66"]
+[ext_resource type="PackedScene" uid="uid://b3caldknpf0ch" path="res://Assets/Rollecoaster Package/coaster-mouse-curve.glb" id="30_or1g5"]
+[ext_resource type="PackedScene" uid="uid://cflr50ckmogwd" path="res://Assets/Rollecoaster Package/coaster-mouse-looping.glb" id="31_ewn8l"]
+[ext_resource type="PackedScene" uid="uid://bcb4lmmp1k5hc" path="res://Assets/Rollecoaster Package/coaster-mouse-segment.glb" id="32_54er1"]
+[ext_resource type="PackedScene" uid="uid://bf7w2l1wsclts" path="res://Assets/Rollecoaster Package/coaster-mouse-straight-bend-large.glb" id="33_uigu8"]
+[ext_resource type="PackedScene" uid="uid://cm14fuxpyk4y1" path="res://Assets/Rollecoaster Package/coaster-mouse-straight-bend.glb" id="34_aq56b"]
+[ext_resource type="PackedScene" uid="uid://jcyujgmbjahg" path="res://Assets/Rollecoaster Package/coaster-mouse-straight-bump-down.glb" id="35_d82t4"]
+[ext_resource type="PackedScene" uid="uid://ch15tu618q6l6" path="res://Assets/Rollecoaster Package/coaster-mouse-straight-bump-up.glb" id="36_8tm3l"]
+[ext_resource type="PackedScene" uid="uid://duegdh1jegnlt" path="res://Assets/Rollecoaster Package/coaster-mouse-straight-hill-beginning.glb" id="37_75xdq"]
+[ext_resource type="PackedScene" uid="uid://cut8jn8ylwhqq" path="res://Assets/Rollecoaster Package/coaster-mouse-straight-hill-complete-half.glb" id="38_4tu7q"]
+[ext_resource type="PackedScene" uid="uid://bhn2018xvh2kt" path="res://Assets/Rollecoaster Package/coaster-mouse-straight-hill-complete.glb" id="39_k0pox"]
+[ext_resource type="PackedScene" uid="uid://8ewxcbbc0hhd" path="res://Assets/Rollecoaster Package/coaster-mouse-straight-hill-end.glb" id="40_slln5"]
+[ext_resource type="PackedScene" uid="uid://cmynto5lua6sh" path="res://Assets/Rollecoaster Package/coaster-mouse-straight-skew-left-side.glb" id="41_w065k"]
+[ext_resource type="PackedScene" uid="uid://pnf76q3qwmgl" path="res://Assets/Rollecoaster Package/coaster-mouse-straight-skew-left.glb" id="42_08it2"]
+[ext_resource type="PackedScene" uid="uid://pq3k58wtpn6e" path="res://Assets/Rollecoaster Package/coaster-mouse-straight-skew-right-side.glb" id="43_gsflb"]
+[ext_resource type="PackedScene" uid="uid://bplkngh2h6ka4" path="res://Assets/Rollecoaster Package/coaster-mouse-straight-skew-right.glb" id="44_n243k"]
+[ext_resource type="PackedScene" uid="uid://dtdrse2ml6xgu" path="res://Assets/Rollecoaster Package/coaster-mouse-straight.glb" id="45_ssrpd"]
+[ext_resource type="PackedScene" uid="uid://dy1oj5twwkuy6" path="res://Assets/Rollecoaster Package/coaster-mouse-track.glb" id="46_5qote"]
+[ext_resource type="PackedScene" uid="uid://bmtwaynw0s4sb" path="res://Assets/Rollecoaster Package/coaster-steel-cap-back.glb" id="47_6qct8"]
+[ext_resource type="PackedScene" uid="uid://b8ha3d85i60t7" path="res://Assets/Rollecoaster Package/coaster-steel-cap-front.glb" id="48_h2h8y"]
+[ext_resource type="PackedScene" uid="uid://drekw4lhb68kb" path="res://Assets/Rollecoaster Package/coaster-steel-corner-large-ramp.glb" id="49_touad"]
+[ext_resource type="PackedScene" uid="uid://bk5fswhpxrgi6" path="res://Assets/Rollecoaster Package/coaster-steel-corner-large.glb" id="50_ix20l"]
+[ext_resource type="PackedScene" uid="uid://c7mkkcnor5wyr" path="res://Assets/Rollecoaster Package/coaster-steel-corner-small-ramp.glb" id="51_mdi5t"]
+[ext_resource type="PackedScene" uid="uid://blwelnhen8nxq" path="res://Assets/Rollecoaster Package/coaster-steel-corner-small.glb" id="52_duf0w"]
+[ext_resource type="PackedScene" uid="uid://46cvqces156p" path="res://Assets/Rollecoaster Package/coaster-steel-curve.glb" id="53_84pex"]
+[ext_resource type="PackedScene" uid="uid://lj3petllar15" path="res://Assets/Rollecoaster Package/coaster-steel-looping.glb" id="54_tt7jq"]
+[ext_resource type="PackedScene" uid="uid://befly8ea7d0po" path="res://Assets/Rollecoaster Package/coaster-steel-segment.glb" id="55_ro0c0"]
+[ext_resource type="PackedScene" uid="uid://b21semem3cnxb" path="res://Assets/Rollecoaster Package/coaster-steel-straight-bend-large.glb" id="56_78hcr"]
+[ext_resource type="PackedScene" uid="uid://dmfk0b611t61e" path="res://Assets/Rollecoaster Package/coaster-steel-straight-bend.glb" id="57_ec41t"]
+[ext_resource type="PackedScene" uid="uid://b3t1bwps58fun" path="res://Assets/Rollecoaster Package/coaster-steel-straight-bump-down.glb" id="58_6jip0"]
+[ext_resource type="PackedScene" uid="uid://7tjrjahiboef" path="res://Assets/Rollecoaster Package/coaster-steel-straight-bump-up.glb" id="59_facj1"]
+[ext_resource type="PackedScene" uid="uid://bcxwv4nitjhpq" path="res://Assets/Rollecoaster Package/coaster-steel-straight-hill-beginning.glb" id="60_8dgyf"]
+[ext_resource type="PackedScene" uid="uid://8l6n5pcqtcfo" path="res://Assets/Rollecoaster Package/coaster-steel-straight-hill-complete-half.glb" id="61_ngclp"]
+[ext_resource type="PackedScene" uid="uid://dsc4pucyeljwi" path="res://Assets/Rollecoaster Package/coaster-steel-straight-hill-complete.glb" id="62_v66uq"]
+[ext_resource type="PackedScene" uid="uid://i0uaxha2qhdy" path="res://Assets/Rollecoaster Package/coaster-steel-straight-hill-end.glb" id="63_lljud"]
+[ext_resource type="PackedScene" uid="uid://bin8s3tcap8m2" path="res://Assets/Rollecoaster Package/coaster-steel-straight-skew-left-side.glb" id="64_2gyhe"]
+[ext_resource type="PackedScene" uid="uid://cbqc7qk2mx3t2" path="res://Assets/Rollecoaster Package/coaster-steel-straight-skew-left.glb" id="65_upo51"]
+[ext_resource type="PackedScene" uid="uid://cgrl2772ucxdv" path="res://Assets/Rollecoaster Package/coaster-steel-straight-skew-right-side.glb" id="66_kauc4"]
+[ext_resource type="PackedScene" uid="uid://bk4c244f3nt2n" path="res://Assets/Rollecoaster Package/coaster-steel-straight-skew-right.glb" id="67_fnqat"]
+[ext_resource type="PackedScene" uid="uid://wydsrqo0pxvu" path="res://Assets/Rollecoaster Package/coaster-steel-straight.glb" id="68_dy6yo"]
+[ext_resource type="PackedScene" uid="uid://cmtufxsxfttae" path="res://Assets/Rollecoaster Package/coaster-steel-track.glb" id="69_bssvv"]
+[ext_resource type="PackedScene" uid="uid://bnx6vax2ju6qa" path="res://Assets/Rollecoaster Package/coaster-train-front.glb" id="70_ucwse"]
+[ext_resource type="PackedScene" uid="uid://c128yxv684au5" path="res://Assets/Rollecoaster Package/coaster-train-hanging.glb" id="71_vwk3p"]
+[ext_resource type="PackedScene" uid="uid://v887r65lfkbj" path="res://Assets/Rollecoaster Package/coaster-train-safety.glb" id="72_6lew7"]
+[ext_resource type="PackedScene" uid="uid://co2xfmmxx1rnt" path="res://Assets/Rollecoaster Package/coaster-train-wooden.glb" id="73_10wmp"]
+[ext_resource type="PackedScene" uid="uid://b1pmelsvs7svb" path="res://Assets/Rollecoaster Package/coaster-train.glb" id="74_7l58j"]
+[ext_resource type="PackedScene" uid="uid://cpd4doeay8r0u" path="res://Assets/Rollecoaster Package/coaster-wood-corner-large-ramp.glb" id="75_1w0cs"]
+[ext_resource type="PackedScene" uid="uid://bunncpermlba2" path="res://Assets/Rollecoaster Package/coaster-wood-corner-large.glb" id="76_sl4ys"]
+[ext_resource type="PackedScene" uid="uid://b5rlnepkiejsr" path="res://Assets/Rollecoaster Package/coaster-wood-corner-small-ramp.glb" id="77_6k2b6"]
+[ext_resource type="PackedScene" uid="uid://bpxog3w67jpt3" path="res://Assets/Rollecoaster Package/coaster-wood-corner-small.glb" id="78_1uttr"]
+[ext_resource type="PackedScene" uid="uid://b0eibi0icvii8" path="res://Assets/Rollecoaster Package/coaster-wood-curve.glb" id="79_a7ng0"]
+[ext_resource type="PackedScene" uid="uid://dwo2mlfb06ma" path="res://Assets/Rollecoaster Package/coaster-wood-looping.glb" id="80_g7fe3"]
+[ext_resource type="PackedScene" uid="uid://82u12sy8rbra" path="res://Assets/Rollecoaster Package/coaster-wood-segment.glb" id="81_ajnvk"]
+[ext_resource type="PackedScene" uid="uid://c0sgwrieb2lnc" path="res://Assets/Rollecoaster Package/coaster-wood-straight-bend-large.glb" id="82_bxvwp"]
+[ext_resource type="PackedScene" uid="uid://bkl55t7b44dv2" path="res://Assets/Rollecoaster Package/coaster-wood-straight-bend.glb" id="83_dbqi0"]
+[ext_resource type="PackedScene" uid="uid://cncectjap00a" path="res://Assets/Rollecoaster Package/coaster-wood-straight-bump-down.glb" id="84_7okxy"]
+[ext_resource type="PackedScene" uid="uid://cvmvvnti1amew" path="res://Assets/Rollecoaster Package/coaster-wood-straight-bump-up.glb" id="85_krhsi"]
+[ext_resource type="PackedScene" uid="uid://dmsuqc0ccflfv" path="res://Assets/Rollecoaster Package/coaster-wood-straight-hill-beginning.glb" id="86_bhs06"]
+[ext_resource type="PackedScene" uid="uid://c7idm7qy6ogba" path="res://Assets/Rollecoaster Package/coaster-wood-straight-hill-complete-half.glb" id="87_bdiaw"]
+[ext_resource type="PackedScene" uid="uid://d1d1r8hx12oo2" path="res://Assets/Rollecoaster Package/coaster-wood-straight-hill-complete.glb" id="88_6g1py"]
+[ext_resource type="PackedScene" uid="uid://drv3rjc0f37ef" path="res://Assets/Rollecoaster Package/coaster-wood-straight-hill-end.glb" id="89_pivl3"]
+[ext_resource type="PackedScene" uid="uid://b36cw5j42s1v2" path="res://Assets/Rollecoaster Package/coaster-wood-straight-skew-left-side.glb" id="90_hciib"]
+[ext_resource type="PackedScene" uid="uid://vq6ltgukggde" path="res://Assets/Rollecoaster Package/coaster-wood-straight-skew-left.glb" id="91_spfl7"]
+[ext_resource type="PackedScene" uid="uid://dn8feirhbt2ie" path="res://Assets/Rollecoaster Package/coaster-wood-straight-skew-right-side.glb" id="92_0h8rj"]
+[ext_resource type="PackedScene" uid="uid://cwbefnlbkf84x" path="res://Assets/Rollecoaster Package/coaster-wood-straight-skew-right.glb" id="93_xaovi"]
+[ext_resource type="PackedScene" uid="uid://bnsaib1wgrtwa" path="res://Assets/Rollecoaster Package/coaster-wood-straight.glb" id="94_pfs3q"]
+[ext_resource type="PackedScene" uid="uid://bh80l44v0c30j" path="res://Assets/Rollecoaster Package/coaster-wood-track.glb" id="95_ek566"]
+[ext_resource type="PackedScene" uid="uid://nq8o8hsfhcun" path="res://Assets/Rollecoaster Package/flowers.glb" id="96_qo1ug"]
+[ext_resource type="PackedScene" uid="uid://dt43ii744gypm" path="res://Assets/Rollecoaster Package/grass.glb" id="97_wwo20"]
+[ext_resource type="PackedScene" uid="uid://dq8hmjdw7v0hb" path="res://Assets/Rollecoaster Package/park-entrance.glb" id="98_p1vhs"]
+[ext_resource type="PackedScene" uid="uid://cgbfh7lrbjwnh" path="res://Assets/Rollecoaster Package/path-corner.glb" id="99_80mmr"]
+[ext_resource type="PackedScene" uid="uid://cd1jlnbov6as2" path="res://Assets/Rollecoaster Package/path-crossing.glb" id="100_rccwf"]
+[ext_resource type="PackedScene" uid="uid://bmgsvun04ycix" path="res://Assets/Rollecoaster Package/path-exit.glb" id="101_cxtqn"]
+[ext_resource type="PackedScene" uid="uid://m7g6gv2jhose" path="res://Assets/Rollecoaster Package/path-split.glb" id="102_pbnsi"]
+[ext_resource type="PackedScene" uid="uid://bbbys7pl0k1ju" path="res://Assets/Rollecoaster Package/path-steps.glb" id="103_7ktev"]
+[ext_resource type="PackedScene" uid="uid://cds36cnjun1vr" path="res://Assets/Rollecoaster Package/path-straight.glb" id="104_dev1y"]
+[ext_resource type="PackedScene" uid="uid://1hu6egh6yodp" path="res://Assets/Rollecoaster Package/queue-corner.glb" id="105_ca3tv"]
+[ext_resource type="PackedScene" uid="uid://dg03kumty0pxu" path="res://Assets/Rollecoaster Package/queue-crossing.glb" id="106_mtbd5"]
+[ext_resource type="PackedScene" uid="uid://cgyc5n1oiifnf" path="res://Assets/Rollecoaster Package/queue-entrance.glb" id="107_fhkvo"]
+[ext_resource type="PackedScene" uid="uid://djadluttx5ijy" path="res://Assets/Rollecoaster Package/queue-split.glb" id="108_8sfyo"]
+[ext_resource type="PackedScene" uid="uid://bvv0aq46syyem" path="res://Assets/Rollecoaster Package/queue-steps.glb" id="109_a41uj"]
+[ext_resource type="PackedScene" uid="uid://duggaiy3h2xh0" path="res://Assets/Rollecoaster Package/queue-straight.glb" id="110_o7etk"]
+[ext_resource type="PackedScene" uid="uid://bm3qwx7r3nfex" path="res://Assets/Rollecoaster Package/ride-entrance.glb" id="111_6u5oe"]
+[ext_resource type="PackedScene" uid="uid://dpc4svou6fomv" path="res://Assets/Rollecoaster Package/ride-exit.glb" id="112_n7qmq"]
+[ext_resource type="PackedScene" uid="uid://dkoc33gjnyiry" path="res://Assets/Rollecoaster Package/stall-drinks.glb" id="113_wx6rf"]
+[ext_resource type="PackedScene" uid="uid://dt4ds7jyfhqbk" path="res://Assets/Rollecoaster Package/stall-food.glb" id="114_onibk"]
+[ext_resource type="PackedScene" uid="uid://bef26bib37m4q" path="res://Assets/Rollecoaster Package/stall-information.glb" id="115_obue8"]
+[ext_resource type="PackedScene" uid="uid://bprs1betlcopw" path="res://Assets/Rollecoaster Package/stall-toilets.glb" id="116_top3n"]
+[ext_resource type="PackedScene" uid="uid://du3cn0dirjled" path="res://Assets/Rollecoaster Package/station-fence.glb" id="117_cwew6"]
+[ext_resource type="PackedScene" uid="uid://bk3ucalu4k5eu" path="res://Assets/Rollecoaster Package/station-gate.glb" id="118_hpap3"]
+[ext_resource type="PackedScene" uid="uid://do3o5tsjgvxox" path="res://Assets/Rollecoaster Package/station.glb" id="119_vcm0w"]
+[ext_resource type="PackedScene" uid="uid://dxufvdvxvpi23" path="res://Assets/Rollecoaster Package/support-large-bottom.glb" id="120_ilpxu"]
+[ext_resource type="PackedScene" uid="uid://damu8yee88787" path="res://Assets/Rollecoaster Package/support-large-horizontal-ring.glb" id="121_wxsll"]
+[ext_resource type="PackedScene" uid="uid://djk3klyuybrp3" path="res://Assets/Rollecoaster Package/support-large-horizontal.glb" id="122_5v5ip"]
+[ext_resource type="PackedScene" uid="uid://ddg7vul6kd1ox" path="res://Assets/Rollecoaster Package/support-large-skew-bottom.glb" id="123_lxo44"]
+[ext_resource type="PackedScene" uid="uid://bw65qbjlj4hdn" path="res://Assets/Rollecoaster Package/support-large-skew.glb" id="124_eu1k7"]
+[ext_resource type="PackedScene" uid="uid://u0nb61wy44wj" path="res://Assets/Rollecoaster Package/support-large.glb" id="125_7smmh"]
+[ext_resource type="PackedScene" uid="uid://c01i6bg2s2okg" path="res://Assets/Rollecoaster Package/support-small-bottom.glb" id="126_h0qm2"]
+[ext_resource type="PackedScene" uid="uid://cdphoojsoujea" path="res://Assets/Rollecoaster Package/support-small-horizontal-ring.glb" id="127_icunw"]
+[ext_resource type="PackedScene" uid="uid://dohkr2u5psj18" path="res://Assets/Rollecoaster Package/support-small-horizontal.glb" id="128_g6rye"]
+[ext_resource type="PackedScene" uid="uid://dscuuj042wbi4" path="res://Assets/Rollecoaster Package/support-small-skew-bottom.glb" id="129_eohea"]
+[ext_resource type="PackedScene" uid="uid://ct2enhaqixu0q" path="res://Assets/Rollecoaster Package/support-small-skew.glb" id="130_sxo76"]
+[ext_resource type="PackedScene" uid="uid://fiavke2xnvsa" path="res://Assets/Rollecoaster Package/support-small.glb" id="131_ya2bc"]
+[ext_resource type="PackedScene" uid="uid://bf72ko5gp4eaq" path="res://Assets/Rollecoaster Package/train-log-flume.glb" id="132_cgr8c"]
+[ext_resource type="PackedScene" uid="uid://5gslb345xmoe" path="res://Assets/Rollecoaster Package/train-monorail.glb" id="133_o8nph"]
+[ext_resource type="PackedScene" uid="uid://bk301ao1rxr3f" path="res://Assets/Rollecoaster Package/trash.glb" id="134_lacdv"]
+[ext_resource type="PackedScene" uid="uid://dippyu3wei8r" path="res://Assets/Rollecoaster Package/tree-large.glb" id="135_dm23m"]
+[ext_resource type="PackedScene" uid="uid://yhodl7s3cbdg" path="res://Assets/Rollecoaster Package/tree.glb" id="136_tq2ly"]
+[ext_resource type="PackedScene" uid="uid://tbhb5n1sf3ut" path="res://Assets/Rollecoaster Package/bench.glb" id="137_1h3vn"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="coaster-monorail-cap-back2" parent="." instance=ExtResource("1_433yk")]
+
+[node name="coaster-monorail-cap-front2" parent="." instance=ExtResource("2_ycb32")]
+
+[node name="coaster-monorail-corner-large-ramp2" parent="." instance=ExtResource("3_j4qk3")]
+
+[node name="coaster-monorail-corner-large2" parent="." instance=ExtResource("4_odaef")]
+
+[node name="coaster-monorail-corner-small-ramp2" parent="." instance=ExtResource("5_rd8s8")]
+
+[node name="coaster-monorail-corner-small2" parent="." instance=ExtResource("6_33wjp")]
+
+[node name="coaster-monorail-curve2" parent="." instance=ExtResource("7_arg8a")]
+
+[node name="coaster-monorail-looping2" parent="." instance=ExtResource("8_ch7n1")]
+
+[node name="coaster-monorail-segment2" parent="." instance=ExtResource("9_o7mpu")]
+
+[node name="coaster-monorail-straight-bend-large2" parent="." instance=ExtResource("10_2fbq5")]
+
+[node name="coaster-monorail-straight-bend2" parent="." instance=ExtResource("11_22r5l")]
+
+[node name="coaster-monorail-straight-bump-down2" parent="." instance=ExtResource("12_d511k")]
+
+[node name="coaster-monorail-straight-bump-up2" parent="." instance=ExtResource("13_b4ssu")]
+
+[node name="coaster-monorail-straight-hill-beginning2" parent="." instance=ExtResource("14_qs40n")]
+
+[node name="coaster-monorail-straight-hill-complete-half2" parent="." instance=ExtResource("15_hrwmf")]
+
+[node name="coaster-monorail-straight-hill-complete2" parent="." instance=ExtResource("16_at10q")]
+
+[node name="coaster-monorail-straight-hill-end2" parent="." instance=ExtResource("17_3ppg6")]
+
+[node name="coaster-monorail-straight-skew-left-side2" parent="." instance=ExtResource("18_fvt2f")]
+
+[node name="coaster-monorail-straight-skew-left2" parent="." instance=ExtResource("19_6056m")]
+
+[node name="coaster-monorail-straight-skew-right-side2" parent="." instance=ExtResource("20_exlfd")]
+
+[node name="coaster-monorail-straight-skew-right2" parent="." instance=ExtResource("21_u26s8")]
+
+[node name="coaster-monorail-straight2" parent="." instance=ExtResource("22_lvn3j")]
+
+[node name="coaster-monorail-track2" parent="." instance=ExtResource("23_r3ocw")]
+
+[node name="coaster-mouse-cap-back2" parent="." instance=ExtResource("24_enl6r")]
+
+[node name="coaster-mouse-cap-front2" parent="." instance=ExtResource("25_5q3jp")]
+
+[node name="coaster-mouse-corner-large-ramp2" parent="." instance=ExtResource("26_sb12h")]
+
+[node name="coaster-mouse-corner-large2" parent="." instance=ExtResource("27_avg7t")]
+
+[node name="coaster-mouse-corner-small-ramp2" parent="." instance=ExtResource("28_finca")]
+
+[node name="coaster-mouse-corner-small2" parent="." instance=ExtResource("29_hns66")]
+
+[node name="coaster-mouse-corner-small_rotated" parent="." instance=ExtResource("29_hns66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, -2)
+
+[node name="coaster-mouse-curve2" parent="." instance=ExtResource("30_or1g5")]
+
+[node name="coaster-mouse-looping2" parent="." instance=ExtResource("31_ewn8l")]
+
+[node name="coaster-mouse-segment2" parent="." instance=ExtResource("32_54er1")]
+
+[node name="coaster-mouse-straight-bend-large2" parent="." instance=ExtResource("33_uigu8")]
+
+[node name="coaster-mouse-straight-bend2" parent="." instance=ExtResource("34_aq56b")]
+
+[node name="coaster-mouse-straight-bump-down2" parent="." instance=ExtResource("35_d82t4")]
+
+[node name="coaster-mouse-straight-bump-up2" parent="." instance=ExtResource("36_8tm3l")]
+
+[node name="coaster-mouse-straight-hill-beginning2" parent="." instance=ExtResource("37_75xdq")]
+
+[node name="coaster-mouse-straight-hill-complete-half2" parent="." instance=ExtResource("38_4tu7q")]
+
+[node name="coaster-mouse-straight-hill-complete2" parent="." instance=ExtResource("39_k0pox")]
+
+[node name="coaster-mouse-straight-hill-end2" parent="." instance=ExtResource("40_slln5")]
+
+[node name="coaster-mouse-straight-skew-left-side2" parent="." instance=ExtResource("41_w065k")]
+
+[node name="coaster-mouse-straight-skew-left2" parent="." instance=ExtResource("42_08it2")]
+
+[node name="coaster-mouse-straight-skew-right-side2" parent="." instance=ExtResource("43_gsflb")]
+
+[node name="coaster-mouse-straight-skew-right2" parent="." instance=ExtResource("44_n243k")]
+
+[node name="coaster-mouse-straight2" parent="." instance=ExtResource("45_ssrpd")]
+
+[node name="coaster-mouse-track2" parent="." instance=ExtResource("46_5qote")]
+
+[node name="coaster-steel-cap-back2" parent="." instance=ExtResource("47_6qct8")]
+
+[node name="coaster-steel-cap-front2" parent="." instance=ExtResource("48_h2h8y")]
+
+[node name="coaster-steel-corner-large-ramp2" parent="." instance=ExtResource("49_touad")]
+
+[node name="coaster-steel-corner-large2" parent="." instance=ExtResource("50_ix20l")]
+
+[node name="coaster-steel-corner-small-ramp2" parent="." instance=ExtResource("51_mdi5t")]
+
+[node name="coaster-steel-corner-small2" parent="." instance=ExtResource("52_duf0w")]
+
+[node name="coaster-steel-curve2" parent="." instance=ExtResource("53_84pex")]
+
+[node name="coaster-steel-looping2" parent="." instance=ExtResource("54_tt7jq")]
+
+[node name="coaster-steel-segment2" parent="." instance=ExtResource("55_ro0c0")]
+
+[node name="coaster-steel-straight-bend-large2" parent="." instance=ExtResource("56_78hcr")]
+
+[node name="coaster-steel-straight-bend2" parent="." instance=ExtResource("57_ec41t")]
+
+[node name="coaster-steel-straight-bump-down2" parent="." instance=ExtResource("58_6jip0")]
+
+[node name="coaster-steel-straight-bump-up2" parent="." instance=ExtResource("59_facj1")]
+
+[node name="coaster-steel-straight-hill-beginning2" parent="." instance=ExtResource("60_8dgyf")]
+
+[node name="coaster-steel-straight-hill-complete-half2" parent="." instance=ExtResource("61_ngclp")]
+
+[node name="coaster-steel-straight-hill-complete2" parent="." instance=ExtResource("62_v66uq")]
+
+[node name="coaster-steel-straight-hill-end2" parent="." instance=ExtResource("63_lljud")]
+
+[node name="coaster-steel-straight-skew-left-side2" parent="." instance=ExtResource("64_2gyhe")]
+
+[node name="coaster-steel-straight-skew-left2" parent="." instance=ExtResource("65_upo51")]
+
+[node name="coaster-steel-straight-skew-right-side2" parent="." instance=ExtResource("66_kauc4")]
+
+[node name="coaster-steel-straight-skew-right2" parent="." instance=ExtResource("67_fnqat")]
+
+[node name="coaster-steel-straight2" parent="." instance=ExtResource("68_dy6yo")]
+
+[node name="coaster-steel-track2" parent="." instance=ExtResource("69_bssvv")]
+
+[node name="coaster-train-front2" parent="." instance=ExtResource("70_ucwse")]
+
+[node name="coaster-train-hanging2" parent="." instance=ExtResource("71_vwk3p")]
+
+[node name="coaster-train-safety2" parent="." instance=ExtResource("72_6lew7")]
+
+[node name="coaster-train-wooden2" parent="." instance=ExtResource("73_10wmp")]
+
+[node name="coaster-train2" parent="." instance=ExtResource("74_7l58j")]
+
+[node name="coaster-wood-corner-large-ramp2" parent="." instance=ExtResource("75_1w0cs")]
+
+[node name="coaster-wood-corner-large2" parent="." instance=ExtResource("76_sl4ys")]
+
+[node name="coaster-wood-corner-small-ramp2" parent="." instance=ExtResource("77_6k2b6")]
+
+[node name="coaster-wood-corner-small2" parent="." instance=ExtResource("78_1uttr")]
+
+[node name="coaster-wood-curve2" parent="." instance=ExtResource("79_a7ng0")]
+
+[node name="coaster-wood-looping2" parent="." instance=ExtResource("80_g7fe3")]
+
+[node name="coaster-wood-segment2" parent="." instance=ExtResource("81_ajnvk")]
+
+[node name="coaster-wood-straight-bend-large2" parent="." instance=ExtResource("82_bxvwp")]
+
+[node name="coaster-wood-straight-bend2" parent="." instance=ExtResource("83_dbqi0")]
+
+[node name="coaster-wood-straight-bump-down2" parent="." instance=ExtResource("84_7okxy")]
+
+[node name="coaster-wood-straight-bump-up2" parent="." instance=ExtResource("85_krhsi")]
+
+[node name="coaster-wood-straight-hill-beginning2" parent="." instance=ExtResource("86_bhs06")]
+
+[node name="coaster-wood-straight-hill-complete-half2" parent="." instance=ExtResource("87_bdiaw")]
+
+[node name="coaster-wood-straight-hill-complete2" parent="." instance=ExtResource("88_6g1py")]
+
+[node name="coaster-wood-straight-hill-end2" parent="." instance=ExtResource("89_pivl3")]
+
+[node name="coaster-wood-straight-skew-left-side2" parent="." instance=ExtResource("90_hciib")]
+
+[node name="coaster-wood-straight-skew-left2" parent="." instance=ExtResource("91_spfl7")]
+
+[node name="coaster-wood-straight-skew-right-side2" parent="." instance=ExtResource("92_0h8rj")]
+
+[node name="coaster-wood-straight-skew-right2" parent="." instance=ExtResource("93_xaovi")]
+
+[node name="coaster-wood-straight2" parent="." instance=ExtResource("94_pfs3q")]
+
+[node name="coaster-wood-track2" parent="." instance=ExtResource("95_ek566")]
+
+[node name="flowers2" parent="." instance=ExtResource("96_qo1ug")]
+
+[node name="grass2" parent="." instance=ExtResource("97_wwo20")]
+
+[node name="park-entrance2" parent="." instance=ExtResource("98_p1vhs")]
+
+[node name="path-corner2" parent="." instance=ExtResource("99_80mmr")]
+
+[node name="path-crossing2" parent="." instance=ExtResource("100_rccwf")]
+
+[node name="path-exit2" parent="." instance=ExtResource("101_cxtqn")]
+
+[node name="path-split2" parent="." instance=ExtResource("102_pbnsi")]
+
+[node name="path-steps2" parent="." instance=ExtResource("103_7ktev")]
+
+[node name="path-straight2" parent="." instance=ExtResource("104_dev1y")]
+
+[node name="queue-corner2" parent="." instance=ExtResource("105_ca3tv")]
+
+[node name="queue-crossing2" parent="." instance=ExtResource("106_mtbd5")]
+
+[node name="queue-entrance2" parent="." instance=ExtResource("107_fhkvo")]
+
+[node name="queue-split2" parent="." instance=ExtResource("108_8sfyo")]
+
+[node name="queue-steps2" parent="." instance=ExtResource("109_a41uj")]
+
+[node name="queue-straight2" parent="." instance=ExtResource("110_o7etk")]
+
+[node name="ride-entrance2" parent="." instance=ExtResource("111_6u5oe")]
+
+[node name="ride-exit2" parent="." instance=ExtResource("112_n7qmq")]
+
+[node name="stall-drinks2" parent="." instance=ExtResource("113_wx6rf")]
+
+[node name="stall-food2" parent="." instance=ExtResource("114_onibk")]
+
+[node name="stall-information2" parent="." instance=ExtResource("115_obue8")]
+
+[node name="stall-toilets2" parent="." instance=ExtResource("116_top3n")]
+
+[node name="station-fence2" parent="." instance=ExtResource("117_cwew6")]
+
+[node name="station-gate2" parent="." instance=ExtResource("118_hpap3")]
+
+[node name="station2" parent="." instance=ExtResource("119_vcm0w")]
+
+[node name="support-large-bottom2" parent="." instance=ExtResource("120_ilpxu")]
+
+[node name="support-large-horizontal-ring2" parent="." instance=ExtResource("121_wxsll")]
+
+[node name="support-large-horizontal2" parent="." instance=ExtResource("122_5v5ip")]
+
+[node name="support-large-skew-bottom2" parent="." instance=ExtResource("123_lxo44")]
+
+[node name="support-large-skew2" parent="." instance=ExtResource("124_eu1k7")]
+
+[node name="support-large2" parent="." instance=ExtResource("125_7smmh")]
+
+[node name="support-small-bottom2" parent="." instance=ExtResource("126_h0qm2")]
+
+[node name="support-small-horizontal-ring2" parent="." instance=ExtResource("127_icunw")]
+
+[node name="support-small-horizontal2" parent="." instance=ExtResource("128_g6rye")]
+
+[node name="support-small-skew-bottom2" parent="." instance=ExtResource("129_eohea")]
+
+[node name="support-small-skew2" parent="." instance=ExtResource("130_sxo76")]
+
+[node name="support-small2" parent="." instance=ExtResource("131_ya2bc")]
+
+[node name="train-log-flume2" parent="." instance=ExtResource("132_cgr8c")]
+
+[node name="train-monorail2" parent="." instance=ExtResource("133_o8nph")]
+
+[node name="trash2" parent="." instance=ExtResource("134_lacdv")]
+
+[node name="tree-large2" parent="." instance=ExtResource("135_dm23m")]
+
+[node name="tree2" parent="." instance=ExtResource("136_tq2ly")]
+
+[node name="bench2" parent="." instance=ExtResource("137_1h3vn")]
