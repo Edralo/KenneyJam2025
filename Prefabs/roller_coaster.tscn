@@ -1,17 +1,3 @@
-[gd_scene load_steps=3 format=3 uid="uid://den2nv60o56hu"]
-
-[ext_resource type="MeshLibrary" uid="uid://bs3wovj60putp" path="res://MeshLibraries/coaster.tres" id="1_xo7wl"]
-[ext_resource type="PackedScene" uid="uid://bxsenu6mjf0wh" path="res://Assets/Rollecoaster Package/coaster-mouse-corner-small.glb" id="2_m478t"]
+[gd_scene format=3 uid="uid://den2nv60o56hu"]
 
 [node name="RollerCoaster" type="Node"]
-
-[node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource("1_xo7wl")
-cell_size = Vector3(1, 1, 1)
-data = {
-"cells": PackedInt32Array(65545, 3, 28, 65539, 5, 1441836, 131071, 5, 1441836, 131067, 5, 1441836, 65545, 65535, 44, 65545, 65531, 44, 131067, 65525, 1048620, 131071, 65525, 1048620, 65539, 65525, 1048620, 65543, 65525, 1048604, 131061, 65527, 655388, 131063, 5, 1441820, 65543, 5, 1441836, 131061, 3, 655388, 131063, 65525, 1048620, 65545, 65527, 44, 7, 5, 125, 9, 3, 125, 65527, 5, 125, 65525, 3, 125, 65525, 65527, 125, 65527, 65525, 125, 7, 65525, 125, 9, 65527, 125, 131063, 65529, 1441820, 131063, 1, 1048620, 131067, 1, 1048620, 131067, 65529, 1441836, 65539, 1, 1441836, 65541, 65535, 28, 131071, 65529, 1441836, 65539, 65529, 1441836, 65541, 65531, 44)
-}
-metadata/_editor_floor_ = Vector3(0, 1, 0)
-
-[node name="tkt ça passe" parent="." instance=ExtResource("2_m478t")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.5, 2.504, -6.502)

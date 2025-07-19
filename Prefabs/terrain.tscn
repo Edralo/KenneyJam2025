@@ -5,6 +5,7 @@
 [node name="Terrain" type="Node"]
 
 [node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01, 0)
 mesh_library = ExtResource("1_h0k1d")
 cell_size = Vector3(1, 1, 1)
 data = {
