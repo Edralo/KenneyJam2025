@@ -8,6 +8,7 @@ radius = 1.0
 
 [node name="player_wagon" type="PathFollow3D"]
 script = ExtResource("1_veb2f")
+speed = 1.0
 
 [node name="coaster-train-front2" parent="." instance=ExtResource("1_leif4")]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dr88c2dbvsoi2"]
+[gd_scene load_steps=9 format=3 uid="uid://dr88c2dbvsoi2"]
 
 [ext_resource type="PackedScene" uid="uid://bbis71jchd2h1" path="res://Prefabs/terrain.tscn" id="1_qxrlw"]
 [ext_resource type="MeshLibrary" uid="uid://bs3wovj60putp" path="res://MeshLibraries/coaster.tres" id="2_wrm1d"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dkj366e5v71ev" path="res://Prefabs/coaster parts/coaster_part_straight.tscn" id="4_v158k"]
 [ext_resource type="PackedScene" uid="uid://ctyqm4qf252i6" path="res://Prefabs/coaster parts/coaster_part_turn_left.tscn" id="5_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://bner03fvkyk3b" path="res://Prefabs/coaster parts/coaster_part_turn_right.tscn" id="6_ldgsr"]
+[ext_resource type="Script" uid="uid://dlrymhmmo8jo6" path="res://coaster_part.gd" id="7_o5yvi"]
 [ext_resource type="PackedScene" uid="uid://27fucb2mkv6l" path="res://Prefabs/player_wagon.tscn" id="8_v158k"]
 
 [node name="Game" type="Node"]
@@ -29,85 +30,163 @@ metadata/_editor_floor_ = Vector3(0, 1, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5563, 2.50475, -0.429214)
 track_path = Array[PackedScene]([ExtResource("4_v158k"), ExtResource("5_h4fw4"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("5_h4fw4"), ExtResource("5_h4fw4"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("6_ldgsr"), ExtResource("4_v158k"), ExtResource("6_ldgsr"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("5_h4fw4"), ExtResource("5_h4fw4"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("4_v158k"), ExtResource("5_h4fw4"), ExtResource("4_v158k"), ExtResource("4_v158k")])
 
-[node name="TrackPart_0" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_26" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_2" parent="RollerCoaster2" instance=ExtResource("5_h4fw4")]
+[node name="TrackPart_27" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("5_h4fw4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_3" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_28" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0, 6)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_4" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_29" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6, 0, 6)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_5" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_30" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, 6)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_6" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_31" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14, 0, 6)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_7" parent="RollerCoaster2" instance=ExtResource("5_h4fw4")]
+[node name="TrackPart_32" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("5_h4fw4")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18, 0, 6)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_8" parent="RollerCoaster2" instance=ExtResource("5_h4fw4")]
+[node name="TrackPart_33" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("5_h4fw4")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 20, 0, 4)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_9" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_34" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 18, 0, 2)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_10" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_35" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 14, 0, 2)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_11" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_36" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 10, 0, 2)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_12" parent="RollerCoaster2" instance=ExtResource("6_ldgsr")]
+[node name="TrackPart_37" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("6_ldgsr")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 6, 0, 2)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_13" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_38" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 4, 0, 0)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_14" parent="RollerCoaster2" instance=ExtResource("6_ldgsr")]
+[node name="TrackPart_39" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("6_ldgsr")]
 transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 4, 0, -4)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_15" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_40" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(1.94707e-07, 0, 1, 0, 1, 0, -1, 0, 1.94707e-07, 6, 0, -6)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_16" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_41" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(1.94707e-07, 0, 1, 0, 1, 0, -1, 0, 1.94707e-07, 10, 0, -6)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_17" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_42" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(1.94707e-07, 0, 1, 0, 1, 0, -1, 0, 1.94707e-07, 14, 0, -6)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_18" parent="RollerCoaster2" instance=ExtResource("5_h4fw4")]
+[node name="TrackPart_43" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("5_h4fw4")]
 transform = Transform3D(1.94707e-07, 0, 1, 0, 1, 0, -1, 0, 1.94707e-07, 18, 0, -6)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_19" parent="RollerCoaster2" instance=ExtResource("5_h4fw4")]
+[node name="TrackPart_44" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("5_h4fw4")]
 transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 20, 0, -8)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_20" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_45" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 18, 0, -10)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_21" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_46" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 14, 0, -10)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_22" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_47" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 10, 0, -10)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_23" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_48" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 6, 0, -10)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_24" parent="RollerCoaster2" instance=ExtResource("5_h4fw4")]
+[node name="TrackPart_49" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("5_h4fw4")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 2, 0, -10)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_25" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_50" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, -8)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
-[node name="TrackPart_26" parent="RollerCoaster2" instance=ExtResource("4_v158k")]
+[node name="TrackPart_51" type="Node3D" parent="RollerCoaster2" node_paths=PackedStringArray("end_point", "coaster_path") instance=ExtResource("4_v158k")]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 9.53674e-07, 0, -4)
+script = ExtResource("7_o5yvi")
+end_point = NodePath("end_point")
+coaster_path = NodePath("Path3D")
 
 [node name="player_wagon" parent="." instance=ExtResource("8_v158k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54557, 1.63458)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.58635, 1.54557, -2.53187)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.28711, 0.957898, 0, -0.957898, 0.28711, 0, 3.44312, 0)

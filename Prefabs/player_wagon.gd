@@ -3,9 +3,6 @@ extends PathFollow3D
 @export var speed: float = 5.0
 @onready var detection_area: Area3D
 var current_coaster_part: Node3D = null
-var previous_coaster_part: Node3D = null
-var queued_coaster_part: Node3D = null
-
 func _ready():
 	# Find and connect detection area
 	if not detection_area:
@@ -14,11 +11,7 @@ func _ready():
 				detection_area = child
 				break
 	
-	if detection_area:
-		detection_area.area_entered.connect(_on_area_entered)
-	
 	# Check for initial coaster part after physics settles
-	await get_tree().process_frame
 	await get_tree().process_frame
 	_find_initial_coaster_part()
 
@@ -44,45 +37,31 @@ func _process(delta):
 		# Use exponential approach to prevent reaching exactly 1.0 and looping back
 		var target_progress_ratio = 0.99
 		progress_ratio = (progress_ratio + speed * delta) if (progress_ratio + speed * delta) < target_progress_ratio else target_progress_ratio
-		if target_progress_ratio >= 0.99:
-			_on_path_completed()
+		if progress_ratio >= target_progress_ratio:
+			call_deferred("_on_path_completed")
 
 		#progress = (progress + speed * delta)
 
-func _on_area_entered(area: Area3D):
-	# Only switch if we're near the end of current path (95% complete)
-	if progress_ratio < 0.95:
-		if !queued_coaster_part:
-				if _is_valid_coaster_part(area) and area != current_coaster_part and area != previous_coaster_part:
-					queued_coaster_part = area
-		return
-	
-	if queued_coaster_part:
-		_switch_to_coaster_path(queued_coaster_part)
-		queued_coaster_part = null
-	else:
-		var coaster_part = area.get_parent()
-		if _is_valid_coaster_part(coaster_part) and coaster_part != current_coaster_part and coaster_part != previous_coaster_part:
-			_switch_to_coaster_path(coaster_part)
 
 func _switch_to_coaster_path(coaster_part: Node3D):
+	print("attempting to switch to coaster path: ", coaster_part.name)
 	var new_path = coaster_part.get("coaster_path") as Path3D
 	
 	if not new_path or new_path == get_parent():
 		return
 	
+	print("Switching to new coaster path: ", new_path.name)
 	# Store previous coaster part to prevent going backwards
-	previous_coaster_part = current_coaster_part
 	current_coaster_part = coaster_part
 	
 	# Remove from current parent and add to new path
 	if get_parent():
 		get_parent().remove_child(self)
 	
+	print("Adding to new path: ", new_path.name)
 	new_path.add_child(self)
 	#callback to next frame
-	await get_tree().process_frame
-	progress = 0.0
+	progress_ratio = 0.0
 
 func set_initial_path(path: Path3D, start_progress: float = 0.0):
 	if get_parent() and get_parent() != path:
@@ -90,15 +69,22 @@ func set_initial_path(path: Path3D, start_progress: float = 0.0):
 	
 	path.add_child(self)
 	progress = start_progress
-	
 	# Find the coaster part that owns this path
 	var path_owner = path.get_parent()
 	if path_owner and path_owner.has_method("get") and path_owner.get("coaster_path") == path:
 		current_coaster_part = path_owner
-	
-	previous_coaster_part = null
 
 func _on_path_completed():
-	if queued_coaster_part:
-		_switch_to_coaster_path(queued_coaster_part)
-		queued_coaster_part = null
+	#check overlapping areas to find next coaster part
+	if not detection_area:
+		print("No detection area set, cannot switch coaster part.")
+		return
+	var overlapping_areas = detection_area.get_overlapping_areas()
+	for area in overlapping_areas:
+		var coaster_part = area.get_parent()
+		if _is_valid_coaster_part(coaster_part) and coaster_part != current_coaster_part:
+			_switch_to_coaster_path(coaster_part)
+			return
+		else:
+			print("Invalid coaster part or already on the same path: ", coaster_part.name)
+	
