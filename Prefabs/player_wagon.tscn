@@ -8,9 +8,9 @@ radius = 1.0
 
 [node name="player_wagon" type="PathFollow3D"]
 script = ExtResource("1_veb2f")
-speed = 1.0
 
 [node name="coaster-train-front2" parent="." instance=ExtResource("1_leif4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Area3D" type="Area3D" parent="."]
 

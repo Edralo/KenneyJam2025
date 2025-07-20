@@ -11,16 +11,16 @@ func _set_tracks(value):
 	if Engine.is_editor_hint():
 		call_deferred("_auto_place_objects")
 
-func _ready():
-	if Engine.is_editor_hint():
-		call_deferred("_auto_place_objects")
+# func _ready():
+# 	if Engine.is_editor_hint():
+# 		call_deferred("_auto_place_objects")
 
-# This gets called when properties change in the editor
-func _validate_property(property: Dictionary):
-	if property.name == "track_path":
-		# Force refresh when the property is changed
-		if Engine.is_editor_hint():
-			call_deferred("_auto_place_objects")
+# # This gets called when properties change in the editor
+# func _validate_property(property: Dictionary):
+# 	if property.name == "track_path":
+# 		# Force refresh when the property is changed
+# 		if Engine.is_editor_hint():
+# 			call_deferred("_auto_place_objects")
 
 func _clear_instantiated_nodes():
 	# Remove previously instantiated nodes

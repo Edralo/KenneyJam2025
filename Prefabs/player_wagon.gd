@@ -3,6 +3,7 @@ extends PathFollow3D
 @export var speed: float = 5.0
 @onready var detection_area: Area3D
 var current_coaster_part: Node3D = null
+var move_direction: int = 1  # 1 for forward (0->1), -1 for backward (1->0)
 func _ready():
 	# Find and connect detection area
 	if not detection_area:
@@ -34,11 +35,19 @@ func _is_valid_coaster_part(node: Node3D) -> bool:
 
 func _process(delta):
 	if get_parent() is Path3D:
-		# Use exponential approach to prevent reaching exactly 1.0 and looping back
-		var target_progress_ratio = 0.99
-		progress_ratio = (progress_ratio + speed * delta) if (progress_ratio + speed * delta) < target_progress_ratio else target_progress_ratio
-		if progress_ratio >= target_progress_ratio:
-			call_deferred("_on_path_completed")
+		# Move based on direction
+		if move_direction == 1:
+			# Moving forward (0 -> 0.99)
+			var target_progress_ratio = 0.99
+			progress_ratio = (progress_ratio + speed * delta) if (progress_ratio + speed * delta) < target_progress_ratio else target_progress_ratio
+			if progress_ratio >= target_progress_ratio:
+				call_deferred("_on_path_completed")
+		else:
+			# Moving backward (1 -> 0.01)
+			var target_progress_ratio = 0.01
+			progress_ratio = (progress_ratio - speed * delta) if (progress_ratio - speed * delta) > target_progress_ratio else target_progress_ratio
+			if progress_ratio <= target_progress_ratio:
+				call_deferred("_on_path_completed")
 
 		#progress = (progress + speed * delta)
 
@@ -51,6 +60,9 @@ func _switch_to_coaster_path(coaster_part: Node3D):
 		return
 	
 	print("Switching to new coaster path: ", new_path.name)
+	# Store current position before switching
+	var current_global_pos = global_position
+	
 	# Store previous coaster part to prevent going backwards
 	current_coaster_part = coaster_part
 	
@@ -60,8 +72,24 @@ func _switch_to_coaster_path(coaster_part: Node3D):
 	
 	print("Adding to new path: ", new_path.name)
 	new_path.add_child(self)
-	#callback to next frame
-	progress_ratio = 0.0
+	
+	# Determine which end of the new path we're closer to
+	var start_pos = new_path.to_global(new_path.curve.sample_baked(0.0))
+	var end_pos = new_path.to_global(new_path.curve.sample_baked(new_path.curve.get_baked_length()))
+	
+	var dist_to_start = current_global_pos.distance_to(start_pos)
+	var dist_to_end = current_global_pos.distance_to(end_pos)
+	
+	if dist_to_start < dist_to_end:
+		# Closer to start - move forward
+		progress_ratio = 0.0
+		move_direction = 1
+		print("Starting from beginning of path (moving forward)")
+	else:
+		# Closer to end - move backward
+		progress_ratio = 1.0
+		move_direction = -1
+		print("Starting from end of path (moving backward)")
 
 func set_initial_path(path: Path3D, start_progress: float = 0.0):
 	if get_parent() and get_parent() != path:
@@ -69,6 +97,13 @@ func set_initial_path(path: Path3D, start_progress: float = 0.0):
 	
 	path.add_child(self)
 	progress = start_progress
+	
+	# Set initial direction based on start progress
+	if start_progress > 0.5:
+		move_direction = -1  # Moving backward
+	else:
+		move_direction = 1   # Moving forward
+	
 	# Find the coaster part that owns this path
 	var path_owner = path.get_parent()
 	if path_owner and path_owner.has_method("get") and path_owner.get("coaster_path") == path:
