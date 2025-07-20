@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhij8t3cnjxru"]
+
+[ext_resource type="PackedScene" uid="uid://b5of1hbjj1eb7" path="res://Prefabs/coaster parts/coaster_part.tscn" id="1_5ufjl"]
+[ext_resource type="PackedScene" uid="uid://cflr50ckmogwd" path="res://Assets/Rollecoaster Package/coaster-mouse-looping.glb" id="2_jdelk"]
+[ext_resource type="PackedScene" uid="uid://b3caldknpf0ch" path="res://Assets/Rollecoaster Package/coaster-mouse-curve.glb" id="3_ab0wv"]
+
+[sub_resource type="Curve3D" id="Curve3D_d88fp"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, -0.04, 0, 2.5, 0, 0, 0, 0, 0, 2.5, 0, 0, -2.5, -0.435, 3.7, 0, 0, 0, -2.5, -0.17, 0, 0.82, -1, 0, 0, -0.05, 0, -0.05, 0.05, 0, 0.05, 0, 0, 2, 0.17, 0, -0.82, 0, 0, 2.5, 1, 0, 4, 0, 0, 2.5, 0, 0, -2.5, 0.43, 3.7, 4, 0, 0, -2.5, 0, 0, 0, 0, 0, 4),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_un06i"]
+size = Vector3(1, 1, 4)
+
+[node name="coaster_part" node_paths=PackedStringArray("coaster_path") instance=ExtResource("1_5ufjl")]
+coaster_path = NodePath("Path3D")
+part_size = 2
+
+[node name="Path3D" type="Path3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.85, 0)
+curve = SubResource("Curve3D_d88fp")
+
+[node name="Area3D" type="Area3D" parent="." index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0140986, -0.425, 2.03909)
+shape = SubResource("BoxShape3D_un06i")
+
+[node name="coaster-mouse-looping3" parent="." index="3" instance=ExtResource("2_jdelk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
+
+[node name="coaster-mouse-looping2" parent="." index="4" instance=ExtResource("2_jdelk")]
+
+[node name="coaster-mouse-curve2" parent="." index="5" instance=ExtResource("3_ab0wv")]
+transform = Transform3D(-1, 0, 0, 0, 1, -8.74228e-08, 0, 8.74228e-08, 1, -1, 0, 0)

@@ -15,6 +15,7 @@ size = Vector3(1, 1, 4)
 
 [node name="coaster_part" node_paths=PackedStringArray("coaster_path") instance=ExtResource("1_d88fp")]
 coaster_path = NodePath("Path3D")
+part_size = 2
 
 [node name="coaster-mouse-straight2" parent="." index="1" instance=ExtResource("2_un06i")]
 

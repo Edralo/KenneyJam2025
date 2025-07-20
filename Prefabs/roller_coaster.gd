@@ -4,7 +4,6 @@ extends Node3D
 
 @export var track_path: Array[PackedScene] : set = _set_tracks
 
-var instantiated_nodes: Array[Node3D] = []
 
 func _set_tracks(value):
 	track_path = value
@@ -23,15 +22,16 @@ func _set_tracks(value):
 # 			call_deferred("_auto_place_objects")
 
 func _clear_instantiated_nodes():
-	# Remove previously instantiated nodes
-	for node in instantiated_nodes:
-		if is_instance_valid(node):
-			node.queue_free()
-	instantiated_nodes.clear()
+	# Remove all children
+	for child in get_children():
+		if child is Node3D:
+			child.queue_free()
 
 func _auto_place_objects():
 	_clear_instantiated_nodes()
-	
+	# wait end of frame to ensure the scene is ready
+	await get_tree().process_frame
+
 	var current_position = Vector3.ZERO
 	var current_rotation = Vector3.ZERO
 	
@@ -45,7 +45,6 @@ func _auto_place_objects():
 				instance.name = "TrackPart_" + str(i)
 				instance.position = current_position
 				instance.rotation = current_rotation
-				instantiated_nodes.append(instance)
 				
 				# Set owner for editor persistence
 				if Engine.is_editor_hint():
