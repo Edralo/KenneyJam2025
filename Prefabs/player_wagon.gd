@@ -35,21 +35,22 @@ func _is_valid_coaster_part(node: Node3D) -> bool:
 
 func _process(delta):
 	if get_parent() is Path3D:
+		var path = get_parent() as Path3D
+		var path_length = path.curve.get_baked_length()
+		print("Current progress: ", progress, " / Path length: ", path_length, " Direction: ", move_direction)
 		# Move based on direction
 		if move_direction == 1:
-			# Moving forward (0 -> 0.99)
-			var target_progress_ratio = 0.99
-			progress_ratio = (progress_ratio + speed * delta) if (progress_ratio + speed * delta) < target_progress_ratio else target_progress_ratio
-			if progress_ratio >= target_progress_ratio:
+			# Moving forward
+			var target_progress = path_length - 2  # Stop slightly before end
+			progress = progress + speed * delta
+			if progress >= target_progress:
 				call_deferred("_on_path_completed")
 		else:
-			# Moving backward (1 -> 0.01)
-			var target_progress_ratio = 0.01
-			progress_ratio = (progress_ratio - speed * delta) if (progress_ratio - speed * delta) > target_progress_ratio else target_progress_ratio
-			if progress_ratio <= target_progress_ratio:
+			# Moving backward
+			var target_progress = 0.1  # Stop slightly after start
+			progress = progress - speed * delta
+			if progress <= target_progress:
 				call_deferred("_on_path_completed")
-
-		#progress = (progress + speed * delta)
 
 
 func _switch_to_coaster_path(coaster_part: Node3D):
@@ -82,12 +83,12 @@ func _switch_to_coaster_path(coaster_part: Node3D):
 	
 	if dist_to_start < dist_to_end:
 		# Closer to start - move forward
-		progress_ratio = 0.0
+		progress = 0.0
 		move_direction = 1
 		print("Starting from beginning of path (moving forward)")
 	else:
 		# Closer to end - move backward
-		progress_ratio = 1.0
+		progress = new_path.curve.get_baked_length()
 		move_direction = -1
 		print("Starting from end of path (moving backward)")
 
@@ -110,6 +111,7 @@ func set_initial_path(path: Path3D, start_progress: float = 0.0):
 		current_coaster_part = path_owner
 
 func _on_path_completed():
+	print("Path completed, checking for next coaster part...")
 	#check overlapping areas to find next coaster part
 	if not detection_area:
 		print("No detection area set, cannot switch coaster part.")
